@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/template/template.xhtml">
+	<ui:define name="pageTitle">Identificationr</ui:define>
+	<ui:define name="pageContent">
+	<h1>Identification</h1>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText value="login" />
+			<h:inputText value="#{lb.user.login}" />
+			<h:outputText value="password" />
+			<h:inputSecret value="#{lb.user.password}" />
+			<h:commandButton action="#{lb.doLogin()}" value="login" />
+			<h:commandButton action="/pages/addUser" value="subscribe" />
+		</h:panelGrid>
+	</h:form>
+	</ui:define>
+
+</ui:composition>
